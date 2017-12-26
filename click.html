@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>遮罩</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button id="btn">点击</button>
+    <!-- <div>
+        <span>美女，可以一起吃个饭吗？</span>
+        <button>拒绝</button>
+    </div> -->
+    <script>
+        function fn(){
+            this.btn=document.getElementById("btn");
+            this.dataName();
+           
+        }
+        fn.prototype={
+            constructor:fn,
+            dataName:function(){
+                 var that=this;
+                this.btn.onclick=function(){
+                    //创建属性节点
+                 that.divbody=document.createElement("div"),
+                 that.divbody.className="box";
+                 that.divbody.innerHTML=`<div class='list'><span>美女，可以一起吃个饭吗？</span><button class='btn1'>拒绝</button></div>`;
+                 document.body.appendChild(that.divbody);
+                 that.btn1=document.getElementsByClassName("btn1")[0];
+                 that.Click();
+                }
+            },
+            Click:function(){
+                var that=this;
+                this.btn1.onclick=function(){
+                    document.body.removeChild(that.divbody);
+                }
+            }
+
+        }
+        new fn();
+
+    </script>
+</body>
+</html>

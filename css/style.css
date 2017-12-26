@@ -1,0 +1,40 @@
+*{
+    margin:0;padding:0;
+}
+.box{
+    background:rgba(0,0,0,0.2);
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    opacity:1;
+}
+.list{
+display:block;
+width:500px;
+height:300px;
+line-height:300px;
+text-align:center;
+margin:100px 0 0 100px;
+border-radius:10px;
+position:relative;
+background:#fff;
+}
+
+.f{
+width:30px;
+height:30px;
+line-height:30px;
+text-align:center;
+border-radius:50%;
+background:lime;
+position:absolute;
+right:-10px;
+top:-10px;
+}
+.btn1{
+position:absolute;
+bottom:50px;
+left:45%;
+}
